@@ -67,7 +67,7 @@ def main(argv=sys.argv):
     parser.add_argument('new_file')
     parser.add_argument('--filter')
     args = parser.parse_args(argv[1:])
-    compare(args.old_file, args.new_file, args.filter)
+    print_compare(args.old_file, args.new_file, args.filter)
 
 if __name__ == '__main__':
     main(sys.argv)
