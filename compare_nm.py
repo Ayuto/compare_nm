@@ -22,7 +22,7 @@ def get_symbols(file_path, filter_name=None):
     symbols = set()
     with open(file_path) as f:
         for line in f:
-            symbol = line.split()[-1]
+            symbol = line.split(None, 2)[-1]
             if (filter_name is not None
                     and filter_name.lower() not in symbol.lower()):
                 continue
